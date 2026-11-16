@@ -1,23 +1,23 @@
-# chat-demo
+# Mini Chat
 
 English | [简体中文](README.zh-CN.md)
 
-A static chat demo powered by the DeepSeek API. No application backend is required: the browser connects directly to the configured API service.
+A static chat app powered by the DeepSeek API. No application backend is required: the browser connects directly to the configured API service, and all data stays local.
 
-You can [try the app online](https://deepseek-ai.github.io/chat-demo/) or download the archive from [Releases](https://github.com/deepseek-ai/deepseek-chat-demo/releases), extract it, and double-click `index.html` to use it locally without installation or a build. Enter your API key in Settings before your first chat.
+This repo is a personal fork and reading/learning project based on the official [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo). The UI strings, page title, and documentation have been adjusted for this fork; the architecture notes live in [SOURCE_GUIDE.md](SOURCE_GUIDE.md) (Chinese).
 
 ## Getting started
 
 Install Node.js 22.12+ and pnpm, then run:
 
 ```sh
-git clone https://github.com/deepseek-ai/chat-demo.git
-cd chat-demo
+git clone https://github.com/Hiohk/mini-chat.git
+cd mini-chat
 pnpm install
 pnpm dev
 ```
 
-Open http://localhost:8090.
+Open http://localhost:8090. Enter your API key in Settings before your first chat.
 
 To build the static site:
 
@@ -25,13 +25,13 @@ To build the static site:
 pnpm build
 ```
 
-The output is written to `dist/`. Deploy it to a static web server or open `dist/index.html` directly. Opening the file directly requires browser support for storage on `file://` pages and an API service that permits their cross-origin requests.
+The output is written to `dist/`. Serve it from any static web server, or open `dist/index.html` directly — the latter requires browser support for storage on `file://` pages and an API service that permits such cross-origin requests.
 
 ## Features
 
 - Multiple conversations with automatic titles, renaming, and deletion; edit prompts, regenerate replies, and switch between message branches.
 - Streaming replies, deep thinking, smart search, link reading, and source citations; stop generation or continue eligible replies.
-- Upload, paste, or drag and drop attachments; use voice input and read replies aloud. A live audio spectrum appears in the first row of the input area while recording on mobile.
+- Upload, paste, or drag and drop attachments; voice input and read-aloud replies. A live audio spectrum appears in the first row of the input area while recording on mobile.
 - Markdown, syntax highlighting, KaTeX math, and Mermaid diagrams.
 - Simplified Chinese and English, light and dark themes, mobile layouts, location settings, and chat history import and export.
 
@@ -70,6 +70,8 @@ src/
   utils/               Shared utilities
 ```
 
-## License
+For a per-module walkthrough of the architecture, see [SOURCE_GUIDE.md](SOURCE_GUIDE.md).
 
-[MIT](LICENSE). The build copies the license to `dist/LICENSE`; include it when distributing the app. Third-party dependencies are subject to their own licenses.
+## Credits and license
+
+Originally created by the DeepSeek team as [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo); this fork keeps the same [MIT](LICENSE) license. The build copies the license to `dist/LICENSE`; include it when distributing the app. Third-party dependencies are subject to their own licenses.

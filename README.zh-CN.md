@@ -1,23 +1,23 @@
-# chat-demo
+# Mini Chat
 
 [English](README.md) | 简体中文
 
-基于 DeepSeek API 的静态聊天示例。无需应用后端，浏览器直接请求配置的 API 服务。
+基于 DeepSeek API 的纯前端聊天应用。无需应用后端，浏览器直接请求配置的 API 服务，所有数据保存在本地。
 
-点击 [在线体验](https://deepseek-ai.github.io/chat-demo/) 即可使用，也可以前往 [Releases](https://github.com/deepseek-ai/deepseek-chat-demo/releases) 下载压缩包，解压后双击 `index.html` 在本地使用，无需安装或构建。首次使用时，请在设置中填写 API Key。
+本仓库是基于 DeepSeek 官方开源示例 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) 的二次开发与源码学习项目：调整了页面标题与界面名称，补充了说明文档；架构与模块解读见 [SOURCE_GUIDE.md](SOURCE_GUIDE.md)。
 
 ## 运行
 
 准备 Node.js 22.12+ 和 pnpm：
 
 ```sh
-git clone https://github.com/deepseek-ai/chat-demo.git
-cd chat-demo
+git clone https://github.com/Hiohk/mini-chat.git
+cd mini-chat
 pnpm install
 pnpm dev
 ```
 
-打开 http://localhost:8090 。
+打开 http://localhost:8090 。首次使用时，请在设置中填写 API Key。
 
 生成静态产物：
 
@@ -25,7 +25,7 @@ pnpm dev
 pnpm build
 ```
 
-产物位于 `dist/`，可部署到静态服务器，也可直接打开 `dist/index.html`。直接打开时，浏览器和 API 服务需允许 `file://` 页面的存储与跨域请求。
+产物位于 `dist/`，可部署到任意静态服务器，也可直接打开 `dist/index.html`。直接打开时，浏览器和 API 服务需允许 `file://` 页面的存储与跨域请求。
 
 ## 功能
 
@@ -70,6 +70,8 @@ src/
   utils/               通用工具
 ```
 
-## 许可证
+逐模块的架构说明见 [SOURCE_GUIDE.md](SOURCE_GUIDE.md)。
 
-[MIT](LICENSE)。构建会将许可证复制到 `dist/LICENSE`，分发时请一并保留；第三方依赖遵循各自的许可证。
+## 致谢与许可证
+
+原始项目由 DeepSeek 团队开源：[deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo)，本项目沿用其 [MIT](LICENSE) 许可证。构建会将许可证复制到 `dist/LICENSE`，分发时请一并保留；第三方依赖遵循各自的许可证。
