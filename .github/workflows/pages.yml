@@ -18,7 +18,8 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: read
-      pages: read
+      # `configure-pages` 的 enablement 需要用 pages: write 调用创建 Pages 站点
+      pages: write
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -45,6 +46,9 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+        with:
+          # 仓库尚未启用 Pages 时自动开启，并使用 GitHub Actions 作为构建源
+          enablement: true
 
       - name: Build
         run: pnpm build
