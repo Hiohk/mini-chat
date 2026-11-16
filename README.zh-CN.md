@@ -4,7 +4,7 @@
 
 基于 DeepSeek API 的纯前端聊天应用。无需应用后端，浏览器直接请求配置的 API 服务，所有数据保存在本地。
 
-![Mini Chat 首页](home.png)
+![Mini Chat 首页](docs/images/home.png)
 
 本仓库是基于 DeepSeek 官方开源示例 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) 的二次开发与源码学习项目：调整了页面标题与界面名称，补充了说明文档；架构与模块解读见 [SOURCE_GUIDE.md](SOURCE_GUIDE.md)。
 

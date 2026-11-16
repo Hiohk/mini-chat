@@ -4,7 +4,7 @@ English | [简体中文](README.zh-CN.md)
 
 A static chat app powered by the DeepSeek API. No application backend is required: the browser connects directly to the configured API service, and all data stays local.
 
-![Mini Chat home screen](home.png)
+![Mini Chat home screen](docs/images/home.png)
 
 This repo is a personal fork and reading/learning project based on the official [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo). The UI strings, page title, and documentation have been adjusted for this fork; the architecture notes live in [SOURCE_GUIDE.md](SOURCE_GUIDE.md) (Chinese).
 
